@@ -7,6 +7,8 @@ This simple web application allows users to calculate their Body Mass Index (BMI
 BMI, or Body Mass Index, is a measure of body fat based on height and weight that applies to adult men and women.
 It is a simple calculation that helps assess whether an individual has a healthy body weight for their height.
 
+![BMI-Calculator](https://github.com/ThatSINEWAVE/BMI-Calculator/assets/133239148/c8f17dc8-a4a5-4af4-b9f6-a64f2ef65a48)
+
 </div>
 
 ### Features

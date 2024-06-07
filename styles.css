@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.box {
+	background: #fff;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 400px;
+	width: 100%;
+}
+
+h1 {
+	font-size: 2em;
+	margin-top: -10px;
+	margin-bottom: 20px;
+	color: #333;
+	font-weight: 700;
+}
+
+.input-group {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.input-group label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 5px;
+	color: #666;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+	width: 100%;
+	padding: 12px;
+	box-sizing: border-box;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 1em;
+	transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+	border-color: #2193b0;
+}
+
+.unit-switcher {
+	display: flex;
+	align-items: center;
+}
+
+.unit-switcher select {
+	margin-left: 10px;
+	padding: 12px;
+}
+
+.gender-group {
+	margin-bottom: 20px;
+}
+
+.gender-group label {
+	display: block;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 500;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.gender-options {
+	display: flex;
+	justify-content: space-between;
+}
+
+.gender-option {
+	flex: 1;
+	text-align: center;
+	cursor: pointer;
+}
+
+.gender-option input {
+	display: none;
+}
+
+.gender-option label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1em;
+	color: #666;
+	font-weight: 500;
+	transition: color 0.3s;
+	padding: 10px;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	margin: 0 5px;
+}
+
+.gender-option label i {
+	font-size: 2.5em;
+	margin-bottom: 5px;
+	transition: transform 0.3s, color 0.3s;
+}
+
+.gender-option input:checked+label i {
+	transform: scale(1.2);
+	color: #2193b0;
+}
+
+.gender-option input:checked+label {
+	color: #2193b0;
+	border-color: #2193b0;
+}
+
+button {
+	background-color: #2193b0;
+	color: white;
+	border: none;
+	padding: 15px;
+	font-size: 1em;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+	font-weight: 500;
+}
+
+button:hover {
+	background-color: #1e8bb5;
+	transform: translateY(-2px);
+}
+
+.bmi-scale {
+	display: flex;
+	margin-top: 30px;
+	position: relative;
+	height: 40px;
+	width: 400px;
+	background-color: #eee;
+	border-radius: 20px;
+	overflow: hidden;
+	border: 2px solid #ddd;
+}
+
+.scale-section {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	position: relative;
+	transition: background-color 0.3s;
+}
+
+.scale-section span {
+	position: absolute;
+	bottom: -25px;
+	font-size: 0.8em;
+	width: 100%;
+	text-align: center;
+	color: #333;
+}
+
+.underweight {
+	background-color: #ff4d4d;
+}
+
+.normal {
+	background-color: #4caf50;
+}
+
+.overweight {
+	background-color: #ffa726;
+}
+
+#bmi-indicator {
+	position: absolute;
+	top: -5px;
+	bottom: -5px;
+	width: 5px;
+	background-color: black;
+	transition: left 0.3s;
+}
+
+.bmi-result {
+	margin-top: 20px;
+	font-size: 1.5em;
+	color: #333;
+	font-weight: 700;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	background: transparent;
+	z-index: 1000;
+}
+
+.theme-switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.theme-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	transition: 0.4s;
+	border-radius: 34px;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: #1e8bb5;
+	transition: 0.4s;
+	border-radius: 50%;
+}
+
+input:checked+.slider {
+	background-color: white;
+}
+
+input:checked+.slider:before {
+	transform: translateX(26px);
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	background: transparent;
+}
+
+footer a {
+	margin: 0 15px;
+	display: inline-block;
+	font-size: 20px;
+	color: var(--footer-color);
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background: linear-gradient(to right, #1e1e1e, #333333);
+    color: #fff;
+}
+
+.dark-theme .box {
+    background: #222;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.dark-theme h1 {
+    color: #ccc;
+}
+
+.dark-theme .input-group label {
+    color: #ccc;
+}
+
+.dark-theme .input-group input,
+.dark-theme .input-group select {
+    background: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+.dark-theme .input-group input:focus,
+.dark-theme .input-group select:focus {
+    border-color: #1e8bb5;
+}
+
+.dark-theme .gender-option label {
+    color: #ccc;
+    border-color: #444;
+}
+
+.dark-theme .gender-option input:checked+label {
+    color: #1e8bb5;
+    border-color: #1e8bb5;
+}
+
+.dark-theme .bmi-scale {
+    background-color: #333;
+    border-color: #444;
+}
+
+.dark-theme .scale-section span {
+    color: #ccc;
+}
+
+.dark-theme #bmi-indicator {
+    background-color: #fff;
+}
+
+.dark-theme .bmi-result {
+    color: #fff;
+}
+
+.dark-theme input:checked+.slider {
+    background-color: #fff;
+}
+
+.dark-theme input:checked+.slider:before {
+    background-color: #1e8bb5;
+}
+
+.dark-theme footer a {
+    color: #ccc;
+}

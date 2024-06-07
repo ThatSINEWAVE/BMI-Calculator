@@ -1,6 +1,6 @@
 <div align="center">
 
-## [BMI Calculator](https://thatsinewave.github.io/BMI-Calculator)
+# [BMI Calculator](https://thatsinewave.github.io/BMI-Calculator)
 
 Welcome to the BMI Calculator project! 
 This simple web application allows users to calculate their Body Mass Index (BMI) quickly and easily.

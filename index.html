@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="site-data/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="site-data/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="site-data/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="site-data/favicon-16x16.png">
+    <link rel="manifest" href="site-data/site.webmanifest">
+  </head>
+  <body>
+    <header>
+      <label class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+      </label>
+    </header>
+    <div class="container">
+      <div class="box">
+        <h1>BMI Calculator</h1>
+        <form id="bmi-form">
+          <div class="input-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" required>
+          </div>
+          <div class="input-group">
+            <label for="height">Height</label>
+            <div class="unit-switcher">
+              <input type="number" id="height" required>
+              <select id="height-unit">
+                <option value="cm">cm</option>
+                <option value="in">in</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="weight">Weight</label>
+            <div class="unit-switcher">
+              <input type="number" id="weight" required>
+              <select id="weight-unit">
+                <option value="kg">kg</option>
+                <option value="lb">lb</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-group gender-group">
+            <label>Gender</label>
+            <div class="gender-options">
+              <div class="gender-option">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">
+                  <i class="fas fa-male"></i> Male </label>
+              </div>
+              <div class="gender-option">
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">
+                  <i class="fas fa-female"></i> Female </label>
+              </div>
+            </div>
+          </div>
+          <button type="button" onclick="calculateBMI()">Calculate your BMI</button>
+        </form>
+        <div class="bmi-scale">
+          <div class="scale-section underweight">Underweight <span>10 - 17.1</span>
+          </div>
+          <div class="scale-section normal">Normal <span>17.1 - 23.2</span>
+          </div>
+          <div class="scale-section overweight">Overweight <span>23.2 - 38</span>
+          </div>
+          <div id="bmi-indicator"></div>
+        </div>
+        <div class="bmi-result">
+          <span id="bmi-value"></span>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a href="https://discord.com/invite/2nHHHBWNDw" target="_blank">
+        <i class="fab fa-discord"></i>
+      </a>
+      <a href="https://ko-fi.com/thatsinewave" target="_blank">
+        <i class="fas fa-heart"></i>
+      </a>
+      <a href="https://github.com/ThatSINEWAVE/BMI-Calculator" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
